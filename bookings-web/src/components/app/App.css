@@ -1,8 +1,14 @@
 body {
-    display: 'grid';
-    grid-template-columns: '1fr 1fr 1fr';
     background-color: rgb(238, 222, 229);
     height: 100%;
+}
+.main {
+    display: 'grid';
+    grid-template-columns: '1fr 1fr 1fr';
+}
+
+.header {
+    justify-content: center;
 }
 
 .spinner {
