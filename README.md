@@ -28,7 +28,7 @@ npm start
 - [ ] Add Logout Page (2 points)
 - [ ] Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
-- [ ] Add Places List Pagination (1 point)
+- [X] Add Places List Pagination (1 point)
 - [ ] Add API Tests (1 point)
 - [ ] Add Front End Tests (3 points)
 - [ ] Add "Create Booking" Page (4 points)

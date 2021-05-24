@@ -30,7 +30,7 @@ const Getaways = () => {
       <button onClick={() => setPage((page) => page - 1)}>Prev</button> 
       <button onClick={() => setPage((page) => page + 1)}>Next</button>
 
-      <section className={styleMedia.main}>
+      <section className={style.main}>
         <PlaceList places={currentPlaces} />
       </section>
     </>

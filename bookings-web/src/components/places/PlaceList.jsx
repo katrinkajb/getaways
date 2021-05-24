@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Place from './Place';
+import style from '../app/App.css';
 
-const PlaceList = ({ places }) => {
-  return places.map((place) => <Place key={place.id} {...place} />);
-};
+const PlaceList = ({ places }) => (
+  <ul aria-label='places'>
+    {places.map((place) => (
+      <li key={place.id}>
+        <Place key={place.id} {...place} />
+      </li>
+    ))}
+  </ul>
+);
 
 PlaceList.propTypes = {
   places: PropTypes.arrayOf(
