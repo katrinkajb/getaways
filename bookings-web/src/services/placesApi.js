@@ -35,7 +35,7 @@ export const getOnePlace = async (id) => {
       description: result.description,
       location: result.location,
       pricePerNight: result.price_per_night,
-      image: result.result,
+      image: result.image,
       imageThumbnail: result.image_thumbnail,
       maxGuests: result.max_guests,
       petFriendly: result.pet_friendly,

@@ -17,22 +17,22 @@ export default function App() {
         <Route 
           path='/:id' 
           exact
-          component={Details } 
+          component={Details} 
         />
         {/* <Route 
           path='/register' 
-          exact render={(routerProps) => 
-          <Register {...routerProps} />} 
+          exact 
+          component={Register} 
         />
         <Route 
           path='/login' 
-          exact render={(routerProps) => 
-          <Login {...routerProps} />} 
+          exact 
+          component={Login} 
         />
         <Route 
           path='/logout' 
-          exact render={(routerProps) => 
-          <Logout {...routerProps} />} 
+          exact 
+          component={Logout} 
         /> */}
       </Switch>
     </Router>

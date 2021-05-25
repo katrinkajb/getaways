@@ -4,20 +4,18 @@ import style from '../app/App.css';
 
 const PlaceDetail = ({
     name,
-    slug,
     description,
     location,
     pricePerNight,
-    image,
     maxGuests,
     petFriendly,
     pool,
     wifi,
+    image,
 }) => {
     return (
         <section className={style.place}>
             <h1>{name}</h1>
-            <h2>{slug}</h2>
             <div className={style.location}>{location}</div>
             <div>{description}</div>
             <li>-${pricePerNight} per night</li>
@@ -32,15 +30,14 @@ const PlaceDetail = ({
 
 PlaceDetail.propTypes = {
     name: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     pricePerNight: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
     maxGuests: PropTypes.number.isRequired,
     petFriendly: PropTypes.bool.isRequired,
     pool: PropTypes.bool.isRequired,
     wifi: PropTypes.bool.isRequired,
+    image: PropTypes.string.isRequired,
 }
 
 export default PlaceDetail;
