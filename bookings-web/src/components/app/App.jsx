@@ -19,7 +19,7 @@ export default function App() {
           exact
           component={Details} 
         />
-        {/* <Route 
+        <Route 
           path='/register' 
           exact 
           component={Register} 
@@ -33,7 +33,7 @@ export default function App() {
           path='/logout' 
           exact 
           component={Logout} 
-        /> */}
+        />
       </Switch>
     </Router>
 

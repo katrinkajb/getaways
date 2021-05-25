@@ -23,7 +23,6 @@ export const getPlaces = async () => {
   }
 };
 
-
 export const getOnePlace = async (id) => {
   const response = await fetch(`${process.env.BASE_URL}/places/${id}`);
   if (response.ok) {
@@ -31,7 +30,6 @@ export const getOnePlace = async (id) => {
 
     return {
       name: result.name,
-      slug: result.slug,
       description: result.description,
       location: result.location,
       pricePerNight: result.price_per_night,

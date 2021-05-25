@@ -21,14 +21,14 @@ npm start
 
 ### Lab Ideas
 - [X] Add "Loading..." State (1 point)
-- [ ] Style Places List (2 points)
+- [X] Add Places List Pagination (1 point)
+- [X] Style Places List (2 points)
 - [X] Add Place Detail Page (3 points)
 - [ ] Add User Registration Page (2 points)
 - [ ] Add Login Page (2 points)
 - [ ] Add Logout Page (2 points)
 - [ ] Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
-- [X] Add Places List Pagination (1 point)
 - [ ] Add API Tests (1 point)
 - [ ] Add Front End Tests (3 points)
 - [ ] Add "Create Booking" Page (4 points)
