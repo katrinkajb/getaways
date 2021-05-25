@@ -1,5 +1,4 @@
 /*
-
 name: string
 slug: string
 description: string
@@ -16,7 +15,6 @@ updated_at: datetime
 
 has_many: bookings
 has_many: reviews
-
 */
 
 const mongoose = require('mongoose');

@@ -1,16 +1,32 @@
 body {
     background-color: rgb(238, 222, 229);
     height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    background-color: rgb(238, 222, 229);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .place {
-    border: 2px, solid, black;
+    border: 2px solid black;
     border-radius: 15px;
-
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 0px;
+    margin: 15px;
+    text-decoration: none;
+    color: black;
 }
 
 li {
@@ -20,6 +36,7 @@ li {
 .img {
     width:150px;
     height: auto;
+    border-radius: 10px;
 }
 
 .thumbnail {
@@ -31,17 +48,29 @@ li {
     font-style: italic;
 }
 
+.page_buttons {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
 .header {
+    background-color: rgba(85, 15, 151, 0.897);
+    color: white;
     justify-content: center;
+    align-content: center;
+    font-weight: 800;
+    padding: 10px;
 }
 
 .spinner {
     display: inline-block;
+    justify-self: center;
     position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .spinner:after {
+    width: 200px;
+    height: 200px;
+}
+
+.spinner:after {
     content: " ";
     display: block;
     border-radius: 50%;
@@ -52,18 +81,19 @@ li {
     border: 32px solid #fff;
     border-color: #fff transparent #fff transparent;
     animation: spinner 1.2s infinite;
-  }
-  @keyframes spinner {
+}
+
+@keyframes spinner {
     0% {
       transform: rotate(0);
       animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
     50% {
-      transform: rotate(900deg);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     }
     100% {
-      transform: rotate(1800deg);
+        transform: rotate(1800deg);
     }
-  }
-  
+}
+

@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from '../app/App.css';
+import { Link } from 'react-router-dom';
 
 const Place = ({
+  id, 
   name,
   description,
   location,
   pricePerNight,
-  image,
   imageThumbnail,
   maxGuests,
   petFriendly,
@@ -15,18 +16,17 @@ const Place = ({
   wifi,
 }) => {
   return (
-    <section className={style.place}>
+    <a href={`/${id}`} className={style.place}>
       <h3>{name}</h3>
-      <div>{description}</div>
       <div className={style.location}>{location}</div>
-      <li>-${pricePerNight} per night</li>
-      <li>-Max guests: {maxGuests}</li>
-      <li>-{petFriendly ? 'Pet Friendly' : 'No Pets Allowed'}</li>
-      {pool ? <li>-Has a Pool!</li> : null}
-      {wifi ? <li>-Free Wifi</li> : null}
-      <img className={style.img} src={image} />
+      <div>{description}</div>
+      <div>-${pricePerNight} per night</div>
+      <div>-Max guests: {maxGuests}</div>
+      <div>-{petFriendly ? 'Pet Friendly' : 'No Pets Allowed'}</div>
+      {pool ? <div>-Has a Pool!</div> : null}
+      {wifi ? <div>-Free Wifi</div> : null}
       <img className={style.thumbnail} src={imageThumbnail} />
-    </section>
+    </a>
   );
 };
 
@@ -35,7 +35,6 @@ Place.propTypes = {
   description: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   pricePerNight: PropTypes.number.isRequired,
-  image: PropTypes.string.isRequired,
   imageThumbnail: PropTypes.string.isRequired,
   maxGuests: PropTypes.number.isRequired,
   petFriendly: PropTypes.bool.isRequired,

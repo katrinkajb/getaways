@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getPlaces } from '../services/placesApi';
 import PlaceList from '../components/places/PlaceList';
-import Loading from '../components/app/Loading';
+import Loading from '../components/Loading/Loading';
 import style from '../components/app/App.css';
 
 const Getaways = () => {
@@ -20,20 +20,18 @@ const Getaways = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading === true) return <Loading />
+  if (loading) return <Loading />
   
   else return (
-    <>
-      <h1 className={style.header}>Plan your Getaway!</h1>
+    <main className={style.main}>
+      <div className={style.page_buttons}>
+        <span>Page: {page} </span> 
+        <button onClick={() => setPage((page) => page - 1)}>Prev</button> 
+        <button onClick={() => setPage((page) => page + 1)}>Next</button>
+      </div>
+      <PlaceList places={currentPlaces} />
+    </main>
 
-      <span>Page: {page} </span> 
-      <button onClick={() => setPage((page) => page - 1)}>Prev</button> 
-      <button onClick={() => setPage((page) => page + 1)}>Next</button>
-
-      <section className={style.main}>
-        <PlaceList places={currentPlaces} />
-      </section>
-    </>
   )
 };
 
