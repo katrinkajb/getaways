@@ -15,11 +15,11 @@ export default function App() {
           <Getaways {...routerProps} />} 
         />
         <Route 
-          path='/:id' 
           exact
+          path='/:id' 
           component={Details} 
         />
-        <Route 
+        {/* <Route 
           path='/register' 
           exact 
           component={Register} 
@@ -33,7 +33,7 @@ export default function App() {
           path='/logout' 
           exact 
           component={Logout} 
-        />
+        /> */}
       </Switch>
     </Router>
 
