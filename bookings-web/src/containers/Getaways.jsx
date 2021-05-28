@@ -31,7 +31,6 @@ const Getaways = () => {
       </div>
       <PlaceList places={currentPlaces} />
     </main>
-
   )
 };
 

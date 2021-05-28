@@ -23,24 +23,3 @@ const Details = () => {
 };
 
 export default Details;
-
-// const Details = (props) => {
-//     const [place, setPlace] = useState({});
-//     const [loading, setLoading] = useState(true);
-
-//     useEffect(() => {
-//         getOnePlace(props.match.params.id)
-//             .then(setPlace)
-//             .finally(() => setLoading(false))
-//     }, []);
-    
-//     if (loading) return <Loading />;
-
-//     return (
-//         <PlaceDetail {...place} />
-//     );
-// };
-
-// export default Details;
-
-
