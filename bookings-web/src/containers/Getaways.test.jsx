@@ -1,15 +1,9 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Getaways from './Getaways';
 
-describe('Getaways Container', () => {
-    it('displays the list of places', async () => {
-        render(
-            <Getaways />
-        );
-        return waitFor(async () => {
-            const ul = await screen.findByRole('list', { name: 'places' });
-            expect(ul).toEqualSnapshot();
-        })
+describe('Getaways test', async () => {
+    it('renders the app to the page', () => {
+        render(<Getaways />)
     })
 })

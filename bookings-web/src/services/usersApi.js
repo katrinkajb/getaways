@@ -1,51 +1,37 @@
 export const signUpUser = async (username, email, password) => {
-    try {
-        const rawResponse = await fetch(`${process.env.BASE_URL}/users/create`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ username, email, password })
+    const response = await fetch(`${process.env.BASE_URL}/users/create`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'Application/JSON' },
+        body: JSON.stringify({
+            username: username,
+            email,
+            password,
+        }),
         });
-        const res = await rawResponse.json();
-        const loggedIn = await logInUser(res.email, password);
+    const res = await response.json();
 
-        return loggedIn;
-    } catch {
-        throw new Error(await res.json());
-    }
+    return res;
 };
 
 export const logInUser = async (email, password) => {
-    try {
-        const rawResponse = await fetch(`${process.env.BASE_URL}/users/login`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-            credentials: 'include',
+    const response = await fetch(`${process.env.BASE_URL}/users/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'Application/JSON' },
+        body: JSON.stringify({
+            email,
+            password,
+        }),
         });
-        const res = await rawResponse.json();
+    const res = await response.json();
 
-        localStorage.setItem('USER', res.username);
-
-        return res;
-    } catch {
-        throw new Error(await res.json());
-    }
+    return res;
 };
 
 export const logOutUser = async () => {
-    try {
-        const rawResponse = await fetch(`${process.env.BASE_URL}/users/logout`, {
-            credentials: 'include'
+    const response = await fetch(`${process.env.BASE_URL}/users/logout`, {
+        credentials: 'include'
         });
-        const response = await rawResponse.json();
-        localStorage.removeItem('USER');
-        return response;
-    } catch {
-        throw new Error(await response.json());
-    }
+    const res = await response.json();
+
+    return res;
 };
