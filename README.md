@@ -29,7 +29,7 @@ npm start
 - [X] Add User Registration Page (2 points)
 - [X] Add Login Page (2 points)
 - [X] Add Logout Page (2 points)
-- [X] Add Front End Tests (3 points)
+- [ ] Add Front End Tests (3 points)
 - [ ] Add API Tests (1 point)
 - [ ] Create "Edit User" Page (2 points)
 - [ ] Add "Create Booking" Page (4 points)
