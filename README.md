@@ -26,13 +26,12 @@ npm start
 - [X] Add Place Detail Page (3 points)
 - [X] Create "Cancel Booking" Endpoint (2 points)
 - [X] Create "Edit User" Endpoint (1 point)
+- [X] Add User Registration Page (2 points)
+- [X] Add Login Page (2 points)
+- [X] Add Logout Page (2 points)
 
 - [ ] Add Front End Tests (3 points)
 - [ ] Add API Tests (1 point)
-
-- [ ] Add User Registration Page (2 points)
-- [ ] Add Login Page (2 points)
-- [ ] Add Logout Page (2 points)
 - [ ] Create "Edit User" Page (2 points)
 - [ ] Add "Create Booking" Page (4 points)
 - [ ] Add "Cancel Booking" Page (2 points)

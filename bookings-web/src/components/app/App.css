@@ -54,12 +54,12 @@ li {
 }
 
 .header {
-    background-color: rgba(85, 15, 151, 0.897);
-    color: white;
+    background-color: rgba(170, 99, 236, 0.897);
     justify-content: center;
     align-content: center;
     font-weight: 800;
     padding: 10px;
+    text-decoration: none;
 }
 
 .spinner {

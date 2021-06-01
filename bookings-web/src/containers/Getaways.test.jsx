@@ -7,9 +7,9 @@ describe('Getaways Container', () => {
         render(
             <Getaways />
         );
-        const ul = await screen.findByRole('list', { name: 'places' });
-        // return waitFor(() => {
-        //     expect(ul).toEqualSnapshot();
-        // })
+        return waitFor(() => {
+            const ul = await screen.findByRole('list', { name: 'places' });
+            expect(ul).toEqualSnapshot();
+        })
     })
 })
