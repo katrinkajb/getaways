@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { logInUser } from '../../services/usersApi';
 import Loading from '../Loading/Loading';
 
-export default function Login() {
+export default function Login({ user, setUser }) {
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,7 +15,7 @@ export default function Login() {
             .finally(() => setLoading(false));
     }
 
-    if (loggedInUser && user.username) return (
+    if (user) return (
         <section>
             <h3>You're already logged in</h3>
         </section>

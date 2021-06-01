@@ -16,7 +16,7 @@ export default function Logout({ user, setUser }) {
     if (loading) return <Loading />
 
     return (
-        <div className={style.logPage}>
+        <div>
             <h3>Click to log out</h3>
             <button onClick={handleLogOut}>Log Out</button>
         </div>

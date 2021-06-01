@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Details from '../../containers/Details';
 import Getaways from '../../containers/Getaways';
-import Login from '../auth/Login';
-import Logout from '../auth/LogOut';
-import SignUp from '../auth/SignUp';
+import LoginPage from '../../containers/LoginPage';
+import LogOutPage from '../../containers/LogOutPage';
+import Registration from '../../containers/Registration';
 import Header from '../Header/Header';
 
 export default function App() {
@@ -20,21 +20,21 @@ export default function App() {
           exact render={(routerProps) => <Getaways {...routerProps}/>}
         />
         <Route 
-          exact
-          path='/:id' 
-          exact render={(routerProps) => <Details {...routerProps}/>} 
-        />
-        <Route 
           path='/signup' 
-          exact render={(routerProps) => <SignUp {...routerProps} setUser={setUser} user={user} />}
+          exact render={(routerProps) => <Registration {...routerProps} setUser={setUser} user={user} />}
         />
         <Route 
           path='/login' 
-          exact render={(routerProps) => <Login {...routerProps} setUser={setUser} user={user} />} 
+          exact render={(routerProps) => <LoginPage {...routerProps} setUser={setUser} user={user} />} 
         />
         <Route 
           path='/logout' 
-          exact render={(routerProps) => <Logout {...routerProps} setUser={setUser} user={user} />}
+          exact render={(routerProps) => <LogOutPage {...routerProps} setUser={setUser} user={user} />}
+        />
+        <Route 
+          exact
+          path='/:id' 
+          render={(routerProps) => <Details {...routerProps}/>} 
         />
       </Switch>
     </Router>

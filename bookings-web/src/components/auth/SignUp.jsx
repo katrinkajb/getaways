@@ -18,7 +18,7 @@ export default function SignUp({ user, setUser }) {
             .finally(() => setLoading(false));
     }
 
-    if (loggedInUser && user.username) return (
+    if (user) return (
         <section>
             <h3>You're already logged in</h3>
         </section>
