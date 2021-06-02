@@ -26,8 +26,8 @@ const Getaways = () => {
     <main className={style.main}>
       <div className={style.page_buttons}>
         <span>Page: {page} </span> 
-        <button onClick={() => setPage((page) => page - 1)}>Prev</button> 
-        <button onClick={() => setPage((page) => page + 1)}>Next</button>
+        <button aria-label='prevButton' onClick={() => setPage((page) => page - 1)}>Prev</button> 
+        <button aria-label='nextButton' onClick={() => setPage((page) => page + 1)}>Next</button>
       </div>
       <PlaceList places={currentPlaces} />
     </main>

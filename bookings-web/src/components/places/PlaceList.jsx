@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Place from './Place';
-import style from '../app/App.css';
+// import style from '../app/App.css';
 
 const PlaceList = ({ places }) => (
   <ul aria-label='places'>
