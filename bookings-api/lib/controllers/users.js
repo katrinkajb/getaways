@@ -41,7 +41,7 @@ module.exports = Router()
     res.clearCookie('session');
     res
       .status(200)
-      .json({ success: true, message: 'Logged out succcessfully!' });
+      .json({ success: true, message: 'Logged out successfully!' });
   })
   .get('/:id', async (req, res, next) => {
     try {
@@ -50,4 +50,13 @@ module.exports = Router()
     } catch (err) {
       next(err);
     }
-  });
+  })
+  .put('/:id', async (req, res, next) => {
+    try {
+      const updatedUser = await User.findOne({ _id: req.params.id });
+      res.send(updatedUser);
+    } catch (err) {
+      next(err);
+    }
+  })
+  ;

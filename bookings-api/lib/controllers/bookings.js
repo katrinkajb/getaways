@@ -53,4 +53,7 @@ module.exports = Router()
   })
   .put('/:id', verifyToken, async (req, res, next) => {
     res.send('Updated');
-  });
+  })
+  .delete('/:id', verifyToken, async (req, res, next) => {
+    res.send('Cancelled');
+  })
