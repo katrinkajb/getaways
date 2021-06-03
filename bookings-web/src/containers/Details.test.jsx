@@ -1,7 +1,7 @@
 require('dotenv').config();
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 import { setupServer } from 'msw/node';
 import { rest } from 'msw';
 import Details from './Details';
@@ -38,14 +38,16 @@ describe('Details container', () => {
 
     it('renders details page', () => {
         render(
-            <MemoryRouter>
-                <Details />
+            <MemoryRouter initialEntries={['60ac55a713f85d2a6af9a1ff']}>
+                <Route path=":id">
+                    <Details />
+                </Route>
             </MemoryRouter>)
 
         screen.getByText('Loading...');
 
-        // return waitFor(() => {
-        //     screen.getByText('Licensed Cloned Hotel');
-        // })
+        return waitFor(() => {
+            screen.getByText('Licensed Cloned Hotel');
+        })
     })
 })

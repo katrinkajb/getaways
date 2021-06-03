@@ -18,7 +18,7 @@ const Details = () => {
     if (loading) return <Loading />;
 
     return (
-        <PlaceDetail {...place} />
+        <PlaceDetail place={...place} />
     );
 };
 

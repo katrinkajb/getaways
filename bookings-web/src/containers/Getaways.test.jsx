@@ -65,8 +65,6 @@ describe('Getaways container', () => {
 
             screen.getByRole('button', { name: 'prevButton' });
             screen.getByRole('button', { name: 'nextButton' });
-
-            
         })
     })
 })
